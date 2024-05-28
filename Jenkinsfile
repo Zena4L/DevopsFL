@@ -12,8 +12,8 @@ pipeline {
         stage('Build Docker Image') {
             when {
                 anyOf {
+                    branch 'main'
                     branch 'dev'
-                    branch 'staging'
                 }
             }
             steps {
@@ -51,7 +51,7 @@ pipeline {
             when {
                 anyOf {
                     branch 'main'
-                    branch 'staging'
+                    branch 'dev'
                 }
             }
             steps {
