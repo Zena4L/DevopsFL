@@ -4,6 +4,7 @@ pipeline {
     stages {
         stage('Build With Maven') {
             steps {
+                sh 'chmod +x mvnw'
                 sh './mvnw wrapper:wrapper'
             }
         }
